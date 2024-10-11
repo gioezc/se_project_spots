@@ -1,21 +1,20 @@
-# Project 3: Spots
+# Spots
 
-### Overview  
+**Spots** is an interactive social media web application designed for users to share their memorable moments. Users can upload and remove photos, like photos from other users, and adjust their profile settings.
 
-* Intro  
-* Figma  
-* Images  
-  
-**Intro**
-  
-This project is made so all the elements are displayed correctly on popular screen sizes. We recommend investing more time in completing this project, since it's more difficult than previous ones.  
-  
-**Figma**  
-  
-* [Link to the project on Figma](https://www.figma.com/file/BBNm2bC3lj8QQMHlnqRsga/Sprint-3-Project-%E2%80%94-Spots?type=design&node-id=2%3A60&mode=design&t=afgNFybdorZO6cQo-1)
-  
-**Images**  
-  
-The way you'll do this at work is by exporting images directly from Figma — we recommend doing that to practice more. Don't forget to optimize them [here](https://tinypng.com/), so your project loads faster. 
-  
-Good luck and have fun!
+## Project Description
+
+**Spots** provides a simple interface for users to manage their photo collection and interact with others. Key features include:
+
+- Uploading and removing photos from personal profiles.
+- Viewing and liking photos from other users.
+- Editing basic profile details such as usernames and profile pictures.
+
+## Technologies and Techniques Used
+
+The following technologies and frameworks were utilized to build **Spots**:
+
+- **HTML**: The basic language for building web pages.
+- **CSS**: Used to style the web pages and make them look nice.
+
+Check out the live version of **Spots** on GitHub Pages:
