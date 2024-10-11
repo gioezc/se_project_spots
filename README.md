@@ -18,3 +18,5 @@ The following technologies and frameworks were utilized to build **Spots**:
 - **CSS**: Used to style the web pages and make them look nice.
 
 Check out the live version of **Spots** on GitHub Pages:
+
+[Deployment Link](https://gioezc.github.io/se_project_spots/index.html)
