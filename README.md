@@ -20,3 +20,4 @@ The following technologies and frameworks were utilized to build **Spots**:
 Check out the live version of **Spots** on GitHub Pages:
 
 [Deployment Link](https://gioezc.github.io/se_project_spots/index.html)
+[Project Video](https://1drv.ms/v/c/644d46b991dad700/Eezx0DLyrGFFgs-wrn0y30QB0iXuzRM1MNoo753sU7fEiA?e=9KuOcc)
