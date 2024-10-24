@@ -40,3 +40,15 @@ function closeModal() {
 profileEditButton.addEventListener("click", openModal);
 
 closeProfileModal.addEventListener("click", closeModal);
+
+const currentProfileName = document.querySelector(".profile__name").textContent;
+const currentProfileDescription = document.querySelector(
+  ".profile__description"
+).textContent;
+
+editProfileModal
+  .querySelector("#name")
+  .setAttribute("value", currentProfileName);
+editProfileModal
+  .querySelector("#description")
+  .setAttribute("value", currentProfileDescription);
