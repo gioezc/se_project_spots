@@ -38,11 +38,11 @@ const jobInput = editModal.querySelector("#profile-description-input");
 function openModal() {
   nameInput.value = profileNameElement.textContent;
   jobInput.value = profileJobElement.textContent;
-  editProfileModal.classList.add("modal_opened");
+  editModal.classList.add("modal_opened");
 }
 
 function closeModal() {
-  editProfileModal.classList.remove("modal_opened");
+  editModal.classList.remove("modal_opened");
 }
 
 function handleProfileFormSubmit(evt) {
