@@ -26,10 +26,18 @@ const initialCards = [
 ];
 
 const profileEditButton = document.querySelector(".profile__edit-btn");
-const editProfileModal = document.querySelector("#edit-modal");
-const closeProfileModal = editProfileModal.querySelector(".modal__close-btn");
+const profileNameElement = document.querySelector(".profile__name");
+const profileJobElement = document.querySelector(".profile__description");
+
+const editModal = document.querySelector("#edit-modal");
+const editFormElement = editModal.querySelector(".modal__form");
+const editModalCloseBtn = editModal.querySelector(".modal__close-btn");
+const nameInput = editModal.querySelector("#profile-name-input");
+const jobInput = editModal.querySelector("#profile-description-input");
 
 function openModal() {
+  nameInput.value = profileNameElement.textContent;
+  jobInput.value = profileJobElement.textContent;
   editProfileModal.classList.add("modal_opened");
 }
 
@@ -37,18 +45,20 @@ function closeModal() {
   editProfileModal.classList.remove("modal_opened");
 }
 
+function handleProfileFormSubmit(evt) {
+  evt.preventDefault();
+  profileNameElement.textContent = nameInput.value;
+  profileJobElement.textContent = jobInput.value;
+  closeModal();
+}
+
 profileEditButton.addEventListener("click", openModal);
+editModalCloseBtn.addEventListener("click", closeModal);
+editFormElement.addEventListener("submit", handleProfileFormSubmit);
 
-closeProfileModal.addEventListener("click", closeModal);
-
-const currentProfileName = document.querySelector(".profile__name").textContent;
-const currentProfileDescription = document.querySelector(
-  ".profile__description"
-).textContent;
-
-editProfileModal
-  .querySelector("#name")
-  .setAttribute("value", currentProfileName);
-editProfileModal
-  .querySelector("#description")
-  .setAttribute("value", currentProfileDescription);
+// editProfileModal
+//   .querySelector("#name")
+//   .setAttribute("value", profileNameElement);
+// editProfileModal
+//   .querySelector("#description")
+//   .setAttribute("value", profileJobElement);
