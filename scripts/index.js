@@ -52,10 +52,15 @@ function getCardElement(data) {
 
   const cardNameEl = cardElement.querySelector(".card__title");
   const cardImageEl = cardElement.querySelector(".card__image");
+  const cardLikedBtn = cardElement.querySelector(".card__like-btn");
 
   cardNameEl.textContent = data.name;
   cardImageEl.setAttribute("src", data.link);
   cardImageEl.setAttribute("alt", data.name);
+
+  cardLikedBtn.addEventListener("click", () => {
+    cardLikedBtn.classList.toggle("card__like-button_liked");
+  });
 
   return cardElement;
 }
