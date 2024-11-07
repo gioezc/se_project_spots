@@ -1,3 +1,8 @@
+.card__image-container {
+  display: flex;
+  position: relative;
+}
+
 .card__image {
   height: 413px;
   width: 100%;
@@ -45,6 +50,22 @@
 
 .card__like-button_liked:hover {
   background-image: url(../images/like-icon-liked-hover.svg);
+}
+
+.card__delete-btn {
+  position: absolute;
+  top: 10px;
+  left: 371px;
+  background-image: url(../images/delete-icon.svg);
+  background-color: transparent;
+  border: none;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+}
+
+.card__delete-btn:hover {
+  background-image: url(../images/delete-icon-hover.svg);
 }
 
 @media screen and (max-width: 627px) {
