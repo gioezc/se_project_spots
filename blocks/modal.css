@@ -39,7 +39,8 @@
 }
 
 .modal__image {
-  margin-bottom: 8px;
+  display: block;
+  margin: 8px 0;
   width: 100%;
   object-fit: cover;
   max-width: 80vw;
@@ -73,7 +74,7 @@
   cursor: pointer;
 }
 
-.modal__close_type_preview {
+.modal__close-btn_type_preview {
   position: absolute;
   background-image: url(../images/close-icon-white.svg);
   width: 40px;
@@ -90,7 +91,7 @@
   opacity: 100%;
 }
 
-.modal__close_type_preview:hover {
+.modal__close-btn_type_preview:hover {
   opacity: 40%;
 }
 
@@ -139,8 +140,22 @@
     padding: 0 10px;
   }
 
-  .modal__container {
-    padding: 12px;
+  .modal__image {
+    position: relative;
+    max-width: 288px;
+  }
+
+  .modal__container_type_preview {
+    left: 6px;
+  }
+
+  .modal .modal__close-btn_type_preview {
+    position: relative;
+    left: 248px;
+  }
+
+  .modal__caption {
+    font-size: 16px;
   }
 
   .modal__title {
