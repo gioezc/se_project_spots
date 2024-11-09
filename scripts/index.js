@@ -41,7 +41,7 @@ const nameInput = editModal.querySelector("#profile-name-input");
 const jobInput = editModal.querySelector("#profile-description-input");
 
 const addCardModal = document.querySelector("#add-card-modal");
-const cardForm = addCardModal.querySelector(".modal__form");
+const cardForm = document.forms["add-card-form"];
 const addCardModalCloseBtn = addCardModal.querySelector(".modal__close-btn");
 const cardNameInput = addCardModal.querySelector("#add-card-name-input");
 const cardLinkInput = addCardModal.querySelector("#add-card-link-input");
@@ -109,6 +109,7 @@ function handleAddCardSubmit(evt) {
   };
   const cardElement = getCardElement(inputValues);
   cardList.prepend(cardElement);
+  evt.target.reset();
   closeModal(addCardModal);
 }
 
