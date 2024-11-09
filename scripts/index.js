@@ -36,23 +36,22 @@ const profileJobElement = document.querySelector(".profile__description");
 
 const editModal = document.querySelector("#edit-modal");
 const editFormElement = document.forms["edit-profile"];
-const editModalCloseBtn = editModal.querySelector(".modal__close-btn");
 const nameInput = editModal.querySelector("#profile-name-input");
 const jobInput = editModal.querySelector("#profile-description-input");
 
 const addCardModal = document.querySelector("#add-card-modal");
 const cardForm = document.forms["add-card-form"];
-const addCardModalCloseBtn = addCardModal.querySelector(".modal__close-btn");
 const cardNameInput = addCardModal.querySelector("#add-card-name-input");
 const cardLinkInput = addCardModal.querySelector("#add-card-link-input");
 
 const previewModal = document.querySelector("#preview-modal");
 const previewModalImageEl = previewModal.querySelector(".modal__image");
 const previewModalCaptionEl = previewModal.querySelector(".modal__caption");
-const previewModalCloseBtn = previewModal.querySelector(".modal__close-btn");
 
 const cardTemplate = document.querySelector("#card-template");
 const cardList = document.querySelector(".cards__list");
+
+const closeButtons = document.querySelectorAll(".modal__close-btn");
 
 function getCardElement(data) {
   const cardElement = cardTemplate.content
@@ -118,19 +117,14 @@ profileEditButton.addEventListener("click", () => {
   jobInput.value = profileJobElement.textContent;
   openModal(editModal);
 });
-editModalCloseBtn.addEventListener("click", () => {
-  closeModal(editModal);
-});
 
 profileAddButton.addEventListener("click", () => {
   openModal(addCardModal);
 });
-addCardModalCloseBtn.addEventListener("click", () => {
-  closeModal(addCardModal);
-});
 
-previewModalCloseBtn.addEventListener("click", () => {
-  closeModal(previewModal);
+closeButtons.forEach((button) => {
+  const popup = button.closest(".modal");
+  button.addEventListener("click", () => closeModal(popup));
 });
 
 editFormElement.addEventListener("submit", handleProfileFormSubmit);
