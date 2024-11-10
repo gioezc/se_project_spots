@@ -145,8 +145,12 @@
     max-width: 288px;
   }
 
+  .modal__container {
+    padding: 12px;
+  }
+
   .modal__container_type_preview {
-    left: 6px;
+    padding: 0 6px;
   }
 
   .modal .modal__close-btn_type_preview {
