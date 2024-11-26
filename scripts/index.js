@@ -52,6 +52,7 @@ const cardTemplate = document.querySelector("#card-template");
 const cardList = document.querySelector(".cards__list");
 
 const closeButtons = document.querySelectorAll(".modal__close-btn");
+const submitButton = addCardModal.querySelector(".modal__submit-btn");
 
 function getCardElement(data) {
   const cardElement = cardTemplate.content
@@ -109,12 +110,14 @@ function handleAddCardSubmit(evt) {
   const cardElement = getCardElement(inputValues);
   cardList.prepend(cardElement);
   evt.target.reset();
+  disableButton(submitButton, settings);
   closeModal(addCardModal);
 }
 
 profileEditButton.addEventListener("click", () => {
   nameInput.value = profileNameElement.textContent;
   jobInput.value = profileJobElement.textContent;
+  resetValidation(editFormElement, [nameInput, jobInput], settings);
   openModal(editModal);
 });
 
