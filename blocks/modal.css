@@ -124,6 +124,11 @@
   line-height: 1;
 }
 
+.modal__input:hover {
+  cursor: pointer;
+  border: 1px solid rgba(33, 33, 33, 1);
+}
+
 .modal__input_type_error {
   border: 1px solid rgba(255, 0, 0, 0.6);
 }
@@ -139,12 +144,17 @@
 .modal__submit-btn {
   width: 156px;
   padding: 18px 32px;
+  border: none;
   border-radius: 8px;
   color: #fcf5e5;
   font-size: 16px;
   font-weight: 500;
   line-height: 1;
   background-color: #212121;
+}
+
+.modal__submit-btn:hover {
+  opacity: 80%;
 }
 
 .modal__submit-btn-disabled {
