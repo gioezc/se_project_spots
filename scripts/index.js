@@ -52,7 +52,7 @@ const cardTemplate = document.querySelector("#card-template");
 const cardList = document.querySelector(".cards__list");
 
 const closeButtons = document.querySelectorAll(".modal__close-btn");
-const submitButton = addCardModal.querySelector(".modal__submit-btn");
+const cardFormSubmitButton = addCardModal.querySelector(".modal__submit-btn");
 
 function getCardElement(data) {
   const cardElement = cardTemplate.content
@@ -127,7 +127,7 @@ function handleAddCardSubmit(evt) {
   const cardElement = getCardElement(inputValues);
   cardList.prepend(cardElement);
   evt.target.reset();
-  disableButton(submitButton, settings);
+  disableButton(cardFormSubmitButton, settings);
   closeModal(addCardModal);
 }
 
